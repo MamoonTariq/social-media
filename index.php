@@ -296,6 +296,5 @@ if (isset($_POST['submits'])) {
 			</ul>
 		</div>
 	</div>
-
 </body>
 </html>

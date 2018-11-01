@@ -61,3 +61,13 @@ form.search button {
 form.search button:hover {
     background: #ccd0d5;
 }
+.navbar-nav li a{
+    color: white !important;
+    font-size: 12px;
+    font-weight: bold;
+    padding-top: 18px;
+    padding-bottom: 12px;
+}
+.dropdownbtn a{
+    background-color: gray !important;
+}
