@@ -1,0 +1,12 @@
+`social-media` is a platform which enables users to post comments, share photographs and post links to news or other interesting content on the web, and watch short-form video. Shared content can be made publicly accessible, or it can be shared only among a select group of friends or family, or with a single person.
+
+
+### How to run on local machine
+1. Clone this repository.
+2. Put this directory `social-media` in your wamp/lamxp/xamp server.
+3. Run your local server.
+4. Open `social-media/index.php` in browser.
+
+### License
+Academic Free License v3.0 
+license keywords afl-3.0
