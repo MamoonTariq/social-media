@@ -1,0 +1,63 @@
+.navbar-header{
+    margin-left: 62px;
+}
+.nav{
+    margin-right: 113px;
+}
+.container-fluid{
+    padding: 0px;
+    background-color: #4267B2
+}
+.navbar{
+    min-height: 51px;
+    margin-top: -8px;
+    height: 47px;
+    background-color: #4267B2;
+    border-radius: 0px;
+    margin-bottom: 0px;
+}
+.navbar-brand{
+    padding: 14px 5px;
+}
+
+nav{
+    background-color: #4267B2;
+    margin-top: -4px;
+    border-radius: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+form.search input[type=text] {
+    font-size: 14px;
+    border: 1px solid grey;
+    float: left;
+    width: 393px;
+    background: #f1f1f1;
+    border-right: none;
+    border-radius: 3px;
+    background-color: white;
+    color: black;
+    padding: 2px 6px;
+}
+
+.search{
+    margin-top: 14px;
+}
+
+form.search button {
+    width: 43px;
+    float: left;
+    color: gray;
+    font-size: 14px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+    padding: 2px 2px;
+}
+
+form.search button:hover {
+    background: #ccd0d5;
+}
