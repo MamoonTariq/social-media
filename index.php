@@ -295,8 +295,6 @@ if (isset($_POST['submits'])) {
 				<li><a href="#">Groups</a></li>
 			</ul>
 		</div>
-		
-		
 	</div>
 
 </body>
