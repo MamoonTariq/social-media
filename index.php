@@ -296,9 +296,7 @@ if (isset($_POST['submits'])) {
 			</ul>
 		</div>
 		
-		<div class="main-footer">
-			<span> Facebook © 2018</span>
-		</div>
+		
 	</div>
 
 </body>
