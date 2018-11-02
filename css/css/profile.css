@@ -71,3 +71,65 @@ form.search button:hover {
 .dropdownbtn a{
     background-color: gray !important;
 }
+
+
+
+
+
+
+
+.col-posts{
+    border: 1px solid darkgray;
+    border-radius: 4px;
+}
+.col-posts ul{
+    margin: 0;
+    list-style-type: none;
+    padding: 0;
+
+}
+.col-posts ul li{
+        padding-left: 41px;
+    color: gray;
+    float: left;
+    padding-right: 8px;
+    font-size: 13px;
+    border-bottom: 1px solid darkgray;
+    padding-bottom: 9px;
+    padding-top: 7px;
+}
+.post-input input{
+    width: 100%;
+    
+    border: none;
+    padding-bottom: 58px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+.post-img{
+    margin-bottom: 3px;
+    border-top: 1px solid darkgray;
+    padding: 3px;
+}
+.post-button{
+    border-top: 1px solid darkgray;
+    padding: 5px;
+}
+
+
+
+
+.old_image img{
+    max-width: 444px;
+}
+
+
+.fa-thumbs-up {
+    font-size: 25px !important;
+    cursor: pointer;
+    user-select: none;
+}
+
+.fa:hover {
+  color: darkblue;
+}
