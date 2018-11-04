@@ -61,15 +61,37 @@ form.search button {
 form.search button:hover {
     background: #ccd0d5;
 }
-.navbar-nav li a{
+.navbar-nav li .navtext{
     color: white !important;
     font-size: 12px;
     font-weight: bold;
     padding-top: 18px;
     padding-bottom: 12px;
 }
-.dropdownbtn a{
-    background-color: gray !important;
+.navicons{
+    padding-top: 18px !important;
+    padding-bottom: 0px !important;
+}
+.caret{
+    color: black;
+}
+
+ /*Navbar Right Icons*/
+.fa-facebook-messenger{
+    font-size: 16px;
+    color: black !important;
+}
+.fa-bell{
+    font-size: 16px;
+    color: black !important;
+}
+.fa-user-friends{
+    font-size: 16px;
+    color: black !important;
+}
+.fa-question-circle{
+    font-size: 16px;
+    color: black !important;
 }
 
 
@@ -120,7 +142,7 @@ form.search button:hover {
 
 
 .old_image img{
-    max-width: 444px;
+    max-width: 456px;
 }
 
 
@@ -130,6 +152,19 @@ form.search button:hover {
     user-select: none;
 }
 
-.fa:hover {
-  color: darkblue;
+.shown_data{
+    border: 1px solid darkgray;
+    margin-top: 12px;
 }
+.posts-content{
+    margin-top: 4px;
+    margin-left: 6px;
+}
+.post-name{
+    width: 85%;
+}
+.post-icon{
+    margin-right: 60px;
+}
+
+
