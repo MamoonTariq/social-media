@@ -46,20 +46,19 @@ $(document).ready(function(){
 	});
 
 	$(document).on('click','.btn-danger',function(){
-		//$('#image-id-'+this.id).remove();
+		//
 		var img = $("#img-"+this.id).val();
+		$('#image-id-'+this.id).remove();
 		var img_collection = $("#store-images").val();
 		$.ajax({
 			url: 'include/img-delete.php',
 			type: 'POST',
 			data: {img:img,img_collection:img_collection},
 			success: function(responce){
-				alert(responce);
+				$("#store-images").val(responce);
+
 			}
 		});
-
-
-
 	});
 });
 
