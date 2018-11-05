@@ -28,7 +28,7 @@ $(document).ready(function(){
 				  <input type="hidden" name="date-time" value="'+d+'">\
                   <button id="'+d+'" value="'+d+'" style="float: left;width: 100%" class="btn btn-danger" value="'+d+'" type="button">X</button>\
                   <img style="max-width: 146px;" id="img" src="'+responce+'">\
-                  <input type="hidden" id="img" value="'+responce+'">\
+                  <input type="hidden" id="img-'+d+'" value="'+responce+'">\
                 </div>';
 			} else{
 				url_image = responce;
@@ -36,7 +36,7 @@ $(document).ready(function(){
                   <button id="'+d+'" value="'+d+'" style="float: left;width: 100%" class="btn btn-danger" value="'+d+'" type="button">X</button>\
                   <input type="hidden" name="date-time" value="'+d+'">\
                   <img style="max-width: 146px;" id="img" src="'+responce+'">\
-                  <input type="hidden" id="img" value="'+responce+'">\
+                  <input type="hidden" id="img-'+d+'" value="'+responce+'">\
                 </div>';
 			}
 			$('#store-images').val(url_image);
@@ -44,10 +44,20 @@ $(document).ready(function(){
 			}
 		});
 	});
+
 	$(document).on('click','.btn-danger',function(){
 		//$('#image-id-'+this.id).remove();
-		var img = $("#img").val();
-		alert(img)
+		var img = $("#img-"+this.id).val();
+		var img_collection = $("#store-images").val();
+		$.ajax({
+			url: 'include/img-delete.php',
+			type: 'POST',
+			data: {img:img,img_collection:img_collection},
+			success: function(responce){
+				alert(responce);
+			}
+		});
+
 
 
 	});
