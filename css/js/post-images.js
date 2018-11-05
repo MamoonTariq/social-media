@@ -16,19 +16,27 @@ $(document).ready(function(){
 			contentType: false,
 			processData: false,
 			success: function(responce){
+
+			var d = Math.floor(Date.now()/1000);
+			//var d = dt.toUTCString();
+
 			var url_image =	$('#store-images').val();
 			var live_image = $('.live-posts').html();
 			if (url_image !== '') {
 				url_image = url_image+','+responce;
-				live_image = live_image+'<div style="border: 1px solid;width: 33%;">\
-                  <button style="float: left;width: 100%" class="btn btn-danger" type="button">X</button>\
-                  <img style="max-width: 146px;" src="'+responce+'">\
+				live_image = live_image+'<div id="image-id-'+d+'" style="border: 1px solid;width: 33%;">\
+				  <input type="hidden" name="date-time" value="'+d+'">\
+                  <button id="'+d+'" value="'+d+'" style="float: left;width: 100%" class="btn btn-danger" value="'+d+'" type="button">X</button>\
+                  <img style="max-width: 146px;" id="img" src="'+responce+'">\
+                  <input type="hidden" id="img" value="'+responce+'">\
                 </div>';
 			} else{
 				url_image = responce;
-				live_image = '<div style="border: 1px solid;width: 33%;">\
-                  <button style="float: left;width: 100%" class="btn btn-danger" type="button">X</button>\
-                  <img style="max-width: 146px;" src="'+responce+'">\
+				live_image = '<div id="image-id-'+d+'" style="border: 1px solid;width: 33%;">\
+                  <button id="'+d+'" value="'+d+'" style="float: left;width: 100%" class="btn btn-danger" value="'+d+'" type="button">X</button>\
+                  <input type="hidden" name="date-time" value="'+d+'">\
+                  <img style="max-width: 146px;" id="img" src="'+responce+'">\
+                  <input type="hidden" id="img" value="'+responce+'">\
                 </div>';
 			}
 			$('#store-images').val(url_image);
@@ -36,15 +44,13 @@ $(document).ready(function(){
 			}
 		});
 	});
+	$(document).on('click','.btn-danger',function(){
+		//$('#image-id-'+this.id).remove();
+		var img = $("#img").val();
+		alert(img)
+
+
+	});
 });
 
 
-// jQuery('input[name="student_scrapbook_category_photo"]').on('change', function() {
-      
-//       var fd = new FormData();
-      
-//       var file = jQuery(document).find('input[name="student_scrapbook_category_photo"]');
-
-//       var individual_file = file[0].files[0];
-
-//       fd.append("student_scrapbook_category_photo", individual_file);

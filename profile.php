@@ -19,7 +19,6 @@ if (!isset($_SESSION['email'])) {
   <script src="css/js/post-images.js"></script>
 </head>
 <body>
-
 	<div class="container-fluid">
 		<nav class="navbar navbar-default">  
           <div class="navbar-header">
@@ -90,9 +89,6 @@ if (!isset($_SESSION['email'])) {
             </div>
           </div>
         </form>
-
-
-
         </div>
         <div class="shown_data">
           <div class="posts-content">
