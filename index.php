@@ -10,7 +10,7 @@ if (isset($_POST['submits'])) {
 	$run = mysqli_fetch_assoc($con);
 	if (!$run) {
 		header('Location: signin.php');
-	} else{
+	} else {
 		session_start();
 		$_SESSION['id']=$run['id'];
 		$_SESSION['email']=$email;
@@ -18,7 +18,6 @@ if (isset($_POST['submits'])) {
        header('Location: profile.php');
 	}
 }
-
 ?>
 
 <!DOCTYPE html>

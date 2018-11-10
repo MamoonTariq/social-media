@@ -10,7 +10,7 @@ $(document).ready(function(){
        	fd.append("user_id" , user_id);
 
 		$.ajax({
-			url: 'include/addpost.php',
+			url: 'include/show-post-img-bef-upload.php',
 			type: 'POST',
 			data: fd,
 			contentType: false,
@@ -51,7 +51,7 @@ $(document).ready(function(){
 		$('#image-id-'+this.id).remove();
 		var img_collection = $("#store-images").val();
 		$.ajax({
-			url: 'include/img-delete.php',
+			url: 'include/del-post-imag-bef-upload.php',
 			type: 'POST',
 			data: {img:img,img_collection:img_collection},
 			success: function(responce){

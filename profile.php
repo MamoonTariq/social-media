@@ -15,8 +15,8 @@ if (!isset($_SESSION['email'])) {
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"> -->
 	<script src="css/js/jquery.js"></script>
 	<script src="css/js/bootstrap.js"></script>
-  <script src="css/js/posts.js"></script>
-  <script src="css/js/post-images.js"></script>
+  <script src="css/js/upload-posts.js"></script>
+  <script src="css/js/show-post-imag-bef-upload.js"></script>
 </head>
 <body>
 	<div class="container-fluid">
@@ -118,52 +118,6 @@ if (!isset($_SESSION['email'])) {
         </div>
       </div> <!-- col-md-5 -->
     </div> <!-- Row -->
-
-
-
-  <!-- Create A Posts -->
-  
   </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- 
-<form >
-
-
-
-
-   <ul class="nav navbar-nav">
-              <div class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li class="dropdownbtn"><a href="logout.php">Logout</a></li>
-                </ul>
-              </div>
-            </ul>
-          <input type="hidden" name="user_id" value=" echo $_SESSION['id'];">
-          <div class="form-group">
-            <label>FIRST NAME</label>
-            <input type="text" class="form-control" name="name" id="name" >
-          </div>
-          <div class="form-group">
-            <label for="file">UPLOAD PICTURE</label>
-            <input type="file" class="form-control" name="file_name" id="file">
-          </div>
-          
-        </form> -->

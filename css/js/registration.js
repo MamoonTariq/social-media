@@ -29,7 +29,6 @@ $(document).ready(function(){
 			success:function(respose){
 				$('.afterresponce').html(respose);
 				 //alert(respose);
-
 			}
 		}); // AJAX
 		}

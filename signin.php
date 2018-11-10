@@ -18,7 +18,6 @@ if (isset($_POST['login'])) {
        header('Location: profile.php');
 	}
 }
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -91,8 +90,7 @@ if (isset($_POST['login'])) {
 			</ul>
 		</div>
 		<div class="line"></div>
-		
-			<div class="footer-second ">
+		<div class="footer-second ">
 			<ul class="lang-list">
 				<li><a href="">Sign Up</a></li>
 				<li><a href="#">login</a></li>
@@ -123,8 +121,7 @@ if (isset($_POST['login'])) {
 				<li><a href="#">MarketPlace</a></li>
 				<li><a href="#">Groups</a></li>
 			</ul>
-		</div>
-		
+		</div>		
 		<div class="main-footer">
 			<span> Facebook © 2018</span>
 		</div>
