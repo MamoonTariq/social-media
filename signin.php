@@ -1,6 +1,5 @@
 <?php 
 include 'include/connect.php';
-
 if (isset($_POST['login'])) {
 	$email = $_POST['email'];
 	$pass = md5($_POST['password']);
@@ -38,7 +37,6 @@ if (isset($_POST['login'])) {
 							<u>facebook</u>
 							<a class="signin-btn" href="index.php">Sign Up</a>
 						</h1>
-
 					</div>
 				</div> <!-- END OF FIRST COL -->
 			</div> <!-- END OF ROW -->
@@ -69,9 +67,6 @@ if (isset($_POST['login'])) {
 			</div>
 		</div>
 	</div>
-
-
-
 	<div class="container" style="margin-top: 127px;">	
 		<div class="footer">
 			<ul class="lang-list">
