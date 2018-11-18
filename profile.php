@@ -1,8 +1,10 @@
 <?php
 session_start();
+$user_id = $_SESSION['id'];
 if (!isset($_SESSION['email'])) {
 	header('Location: index.php');
 }
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -17,6 +19,7 @@ if (!isset($_SESSION['email'])) {
 	<script src="css/js/bootstrap.js"></script>
   <script src="css/js/upload-posts.js"></script>
   <script src="css/js/show-post-imag-bef-upload.js"></script>
+  <script src="css/js/show-posts.js"></script>
 </head>
 <body>
 	<div class="container-fluid">
@@ -69,7 +72,7 @@ if (!isset($_SESSION['email'])) {
           <li>Life Event</li>
         </ul>
         <form method="POST" enctype="multipart/form-data" id="form-insert">
-          <input type="hidden" name="user_id" value="<?php echo $_SESSION['id']; ?>">
+          <input type="hidden" name="user_id" id="users" value="<?php echo $_SESSION['id']; ?>">
           <div class="post-input">
             <input type="text" name="name" placeholder="Whats on your Mind">
           </div>
@@ -90,7 +93,8 @@ if (!isset($_SESSION['email'])) {
           </div>
         </form>
         </div>
-        <div class="shown_data">
+        <div class="show-posts">
+          <div class="shown_data">
           <div class="posts-content">
             <table width="100%">
               <tr>
@@ -116,8 +120,10 @@ if (!isset($_SESSION['email'])) {
               <i class="fa fa-thumbs-up">Like</i>
           </div>
         </div>
+      </div>
       </div> <!-- col-md-5 -->
     </div> <!-- Row -->
   </div>
+  <h1 id="show-pos"></h1>
 </body>
 </html>

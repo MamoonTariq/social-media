@@ -5,13 +5,8 @@ if (isset($_POST['name']) || isset($_POST['user_id']) || isset($_POST['store-ima
 	$user_id = $_POST['user_id'];
 	$images = $_POST['store-images'];
 
-	$explodeImg = explode(',', $images);
-	foreach ($explodeImg as $key => $value) {
-		# code...
-	}
-
 		// Applying Conditions
-	if (!empty($mind) && !empty($images)) {
+	if (empty($mind) && empty($images)) {
 		
 	} elseif (empty($images)) {
 		$sql = "INSERT INTO posts ( user_id , post_text ) VALUES ( '$user_id' , '$mind' )";
@@ -22,13 +17,14 @@ if (isset($_POST['name']) || isset($_POST['user_id']) || isset($_POST['store-ima
 		$sql = "INSERT INTO posts ( user_id , post_text ) VALUES ( '$user_id' , '$mind' )";
 		$query_run = mysqli_query( $conn , $sql );
 		$ID = mysqli_insert_id($conn);
-		$posts_query = "INSERT INTO post_images ( posts_id , image ) VALUES ( '$ID' , '$images' )";
+		$explodeImg = explode(',', $images);
+		foreach ($explodeImg as $value) {
+		$posts_query = "INSERT INTO post_images ( posts_id , image ) VALUES ( '$ID' , '$value' )";
 		$run = mysqli_query( $conn , $posts_query );
+		}
 	}
 }
 
-
-exit();
 
 
 

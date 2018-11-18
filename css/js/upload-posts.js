@@ -15,6 +15,12 @@ $(document).ready(function(){
 	});
 });
 
+// function showdata(){
+// 	$.ajax(){
+// 		url: 'include/showposts.php',
+// 		type: 'POST',
+// 	}
+// }
 
 
 // 
