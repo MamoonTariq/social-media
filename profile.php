@@ -13,8 +13,8 @@ if (!isset($_SESSION['email'])) {
 	<link rel="stylesheet" type="text/css" href="css/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/css/profile.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"> -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 	<script src="css/js/jquery.js"></script>
 	<script src="css/js/bootstrap.js"></script>
   <script src="css/js/upload-posts.js"></script>
@@ -124,6 +124,6 @@ if (!isset($_SESSION['email'])) {
       </div> <!-- col-md-5 -->
     </div> <!-- Row -->
   </div>
-  <h1 id="show-pos"></h1>
+  <div id="show-pos"></div>
 </body>
 </html>
