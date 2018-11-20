@@ -7,7 +7,7 @@ $(document).ready(function(){
 			data: { val : val },
 			success: function(response){
 				//console.log(response);
-				$('#show-pos').html(response);
+				$(".show-posts").html(response);
 			}
-	})
+	});
 });

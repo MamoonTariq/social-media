@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 $user_id = $_SESSION['id'];
 if (!isset($_SESSION['email'])) {
@@ -13,13 +14,15 @@ if (!isset($_SESSION['email'])) {
 	<link rel="stylesheet" type="text/css" href="css/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/css/profile.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"> -->
 	<script src="css/js/jquery.js"></script>
 	<script src="css/js/bootstrap.js"></script>
   <script src="css/js/upload-posts.js"></script>
   <script src="css/js/show-post-imag-bef-upload.js"></script>
   <script src="css/js/show-posts.js"></script>
+  <script src="css/js/like-system.js"></script>
 </head>
 <body>
 	<div class="container-fluid">
@@ -93,37 +96,9 @@ if (!isset($_SESSION['email'])) {
           </div>
         </form>
         </div>
-        <div class="show-posts">
-          <div class="shown_data">
-          <div class="posts-content">
-            <table width="100%">
-              <tr>
-               <th class="post-name">Mamoon<br>date</th>
-               <th>
-                  <ul class="nav navbar-nav post-icon">
-                    <div class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-option-horizontal"></span></a>
-                      <ul class="dropdown-menu ddm-e-d">
-                        <li class="dropdownbtn change"><a href="">Edit</a></li>
-                        <li class="dropdownbtn change"><a href="">Delete</a></li>
-                      </ul>
-                    </div>
-                  </ul>
-                </th>
-              </tr>
-           </table>
-          </div>
-          <div class="old_image">
-            <img src="images/connect-people.png">
-          </div>
-          <div>
-              <i class="fa fa-thumbs-up">Like</i>
-          </div>
-        </div>
-      </div>
+        <div class="show-posts"></div>
       </div> <!-- col-md-5 -->
     </div> <!-- Row -->
   </div>
-  <div id="show-pos"></div>
 </body>
 </html>

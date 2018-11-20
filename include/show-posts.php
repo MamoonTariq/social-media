@@ -16,10 +16,10 @@ $run = mysqli_query($conn , $sql);
 while ($result = mysqli_fetch_array($run)) {
   echo '<div class="shown_data">
           <div class="posts-content">
-          <h3>'.$result['post_text'].'</h3>
+          <h4>'.$result['post_text'].'</h4>
             <table width="100%">
               <tr>
-               <th class="post-name">Mamoon<br>date</th>
+               <th class="post-name"></th>
                <th>
                   <ul class="nav navbar-nav post-icon">
                     <div class="dropdown">
@@ -37,16 +37,45 @@ while ($result = mysqli_fetch_array($run)) {
           <div class="old_image">';
           $dbimages = $result['image'];
           $ImplodeImg = explode(',', $dbimages);
+          $a = 1;
           foreach ($ImplodeImg as $img) {
-          	echo '<img src="'.$img.'"></br>';
+          	echo '<img class="'.$a.'" src="'.$img.'"></br>';
+            $a++;
           }
            echo '
           </div>
-          <div>
-              <i class="fa fa-thumbs-up"></i>
+          <div class="post-inf">
+              <i '; 
+              if (userLiked($result['id'])) {
+                echo 'class="fa fa-thumbs-up like-btn"';
+              } else{
+                echo 'class="fa fa-thumbs-o-up like-btn"';
+              }
+              echo 'data-id="'.$result['id'].'"></i>
+              <span class="likes">'.getLikes($result['id']).'</span>
           </div>
         </div>';
   
+}
+
+function getLikes($id){
+  include 'connect.php';
+  $like_query ="SELECT COUNT(*) FROM post_likes WHERE post_id = $id AND like_info = 'like'";
+  $run = mysqli_query( $conn , $like_query );
+  $result = mysqli_fetch_array($run);
+  return $result[0];
+}
+
+function userLiked($id){
+  global $user_id;
+  include 'connect.php';
+  $like_query ="SELECT * FROM post_likes WHERE user_id = $user_id AND post_id = $id AND like_info = 'like'";
+  $run = mysqli_query( $conn , $like_query );
+  if (mysqli_num_rows($run)>0) {
+    return true;
+  } else{
+    return false;
+  }
 }
 
 ?>
