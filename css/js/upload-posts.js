@@ -10,6 +10,7 @@ $(document).ready(function(){
 			processData: false,
 			success: function(response){
 				console.log(response);
+				//$(".show-posts").append(response);
 			}
 		});
 	});

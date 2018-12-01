@@ -154,7 +154,7 @@ form.search button:hover {
 
 .shown_data{
     border: 1px solid darkgray;
-    margin-top: 12px;
+    margin-top: 75px;
 }
 .posts-content{
     margin-top: 4px;
@@ -167,4 +167,32 @@ form.search button:hover {
     margin-right: 60px;
 }
 
+.show-posts{
+    margin-top: 75px !important;
+}
+.post-inf{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
 
+.like-btn{
+    margin-left: 11px;
+}
+.comment-system{
+    margin-top: 5px;
+    margin-bottom: 5px; 
+}
+.comment{
+    width: 70%;
+    border-radius: 9px;
+    margin-top: 10px;
+    margin-left: 32px;
+    margin-bottom: 7px;
+}
+.comm{
+   
+    border-top: 1px solid gray;
+}
+.show-comments{
+    border-top: 1px solid gray;
+}
