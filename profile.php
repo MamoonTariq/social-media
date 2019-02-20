@@ -24,6 +24,7 @@ if (!isset($_SESSION['email'])) {
   <script src="css/js/show-posts.js"></script>
   <script src="css/js/like-system.js"></script>
   <script src="css/js/comment-upload.js"></script>
+  
 </head>
 <body>
 	<div class="container-fluid">
@@ -101,5 +102,7 @@ if (!isset($_SESSION['email'])) {
       </div> <!-- col-md-5 -->
     </div> <!-- Row -->
   </div>
+
+  <script src="css/js/show-comments.js"></script>
 </body>
 </html>

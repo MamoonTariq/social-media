@@ -5,14 +5,15 @@ $(document).on('keypress', '.comment' , function(){
 
 		var post_id = $(this).attr('id');
 		var user_id = $('#user_id').val();
-		var comment = $('#'+post_id).val();
-		console.log(comment);
+		var comment = $('#'+post_id).val(); //#comment-14 
+		//console.log(comment);
 		$.ajax({
 			url: 'include/comments.php',
 			type: "POST",
 			data: {
 				post_id : post_id,
-				user_id: user_id
+				user_id: user_id,
+				comment: comment
 			},
 			success: function(response){
 				console.log(response);
@@ -20,6 +21,10 @@ $(document).on('keypress', '.comment' , function(){
 		});
  }
 });
+
+
+
+
 
 
 

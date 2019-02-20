@@ -61,14 +61,17 @@ while ($result = mysqli_fetch_array($run)) {
                 <span class="likes">'.getLikes($result['id']).'</span>
             </div>
             <div class="col-md-6 comment-system">
-              <a href="#comment">Comment</a>
+              <a href="#comment-'.$result['id'].'">Comment</a>
             </div>
           </div>
           <div class="comm">
             <input type="hidden" id="user_id" value="'.$user_id.'" >
-            <input id="comment-'.$result['id'].'" type="text" class="comment" />
-            <div class="show-comments">
-              <p>This is the best posts</p>
+            <input id="comment-'.$result['id'].'" type="text" class="comment" placeholder="Write a Comment.." />
+
+            <div class="show-comments" >
+              <input type="hidden" id="user_id" value="'.$user_id.'" >
+              <input id="comment" value="'.$result['id'].'" type="hidden" class="comment" />
+             
             </div>
           </div>
         </div>';
